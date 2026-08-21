@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  overflow-x: clip;
+}
+
+@layer base {
+  :root {
+    --background: 42 100% 98%;
+    --foreground: 240 30% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 30% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 30% 14%;
+    --primary: 254 82% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 43 100% 60%;
+    --secondary-foreground: 240 40% 12%;
+    --muted: 250 40% 96%;
+    --muted-foreground: 245 12% 45%;
+    --accent: 340 85% 62%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 248 30% 90%;
+    --input: 248 30% 88%;
+    --ring: 254 82% 60%;
+    --radius: 1.1rem;
+    --mint: 168 70% 45%;
+    --sky: 205 90% 55%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 250 30% 8%;
+    --foreground: 0 0% 98%;
+    --card: 250 25% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 250 25% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 254 82% 68%;
+    --primary-foreground: 250 30% 8%;
+    --secondary: 43 100% 60%;
+    --secondary-foreground: 250 30% 8%;
+    --muted: 250 20% 18%;
+    --muted-foreground: 250 10% 70%;
+    --accent: 340 85% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 250 20% 22%;
+    --input: 250 20% 22%;
+    --ring: 254 82% 68%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  .font-display {
+    font-family: "Baloo 2", "Be Vietnam Pro", cursive;
+  }
+}
+
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee-x 26s linear infinite;
+}
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.animate-floaty { animation: float-y 6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee, .animate-floaty { animation: none; }
+}

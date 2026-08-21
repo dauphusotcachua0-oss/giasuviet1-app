@@ -1,0 +1,8 @@
+﻿{
+  "name": "pocketbase",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "echo Pocketbase chạy ở đây",
+    "start": "echo Pocketbase đã khởi động"
+  }
+}
